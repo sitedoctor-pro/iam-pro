@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مراجعة الاجتماعيات - Duolingo Style</title>
+  <title>مراجعة الاجتماعيات - التاسعة إعدادي</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,46 +12,42 @@
   <style>
     :root {
       --green: #58cc02;
-      --green-dark: #45a301;
+      --green-dark: #46a302;
       --green-soft: #e5ffd3;
       --blue: #1cb0f6;
       --blue-dark: #1387bd;
-      --blue-soft: #dff5ff;
+      --blue-soft: #e2f5ff;
       --yellow: #ffc800;
-      --yellow-soft: #fff5c2;
+      --yellow-soft: #fff5c4;
       --red: #ff4b4b;
-      --red-dark: #d93030;
-      --red-soft: #ffe3e3;
+      --red-dark: #d93636;
+      --red-soft: #ffe4e4;
       --purple: #ce82ff;
-      --purple-soft: #f3e3ff;
+      --purple-soft: #f4e3ff;
       --orange: #ff9600;
-
-      --bg: #f5fbff;
+      --bg: #f4fbff;
       --card: #ffffff;
-      --card-2: #f1f9ff;
+      --card-soft: #f1f9ff;
       --text: #1f2d3d;
       --muted: #64748b;
-      --border: #dbeafe;
-
-      --shadow: 0 12px 0 rgba(30, 41, 59, 0.08), 0 20px 42px rgba(30, 41, 59, 0.12);
-      --mini-shadow: 0 7px 0 rgba(30, 41, 59, 0.10);
+      --border: #d8e9f5;
+      --shadow: 0 12px 0 rgba(15, 23, 42, 0.08), 0 20px 42px rgba(15, 23, 42, 0.12);
+      --mini-shadow: 0 7px 0 rgba(15, 23, 42, 0.10);
       --radius: 24px;
     }
 
     body.dark {
       --bg: #0f172a;
-      --card: #17233a;
-      --card-2: #111c31;
+      --card: #172033;
+      --card-soft: #111c30;
       --text: #f8fafc;
       --muted: #cbd5e1;
-      --border: rgba(255, 255, 255, 0.12);
-
-      --green-soft: rgba(88, 204, 2, 0.14);
-      --blue-soft: rgba(28, 176, 246, 0.14);
-      --yellow-soft: rgba(255, 200, 0, 0.14);
-      --red-soft: rgba(255, 75, 75, 0.14);
-      --purple-soft: rgba(206, 130, 255, 0.14);
-
+      --border: rgba(255,255,255,0.14);
+      --green-soft: rgba(88,204,2,0.16);
+      --blue-soft: rgba(28,176,246,0.16);
+      --yellow-soft: rgba(255,200,0,0.16);
+      --red-soft: rgba(255,75,75,0.16);
+      --purple-soft: rgba(206,130,255,0.16);
       --shadow: 0 12px 0 rgba(0, 0, 0, 0.28), 0 20px 42px rgba(0, 0, 0, 0.34);
       --mini-shadow: 0 7px 0 rgba(0, 0, 0, 0.24);
     }
@@ -59,10 +55,6 @@
     * {
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -73,12 +65,12 @@
       font-weight: 700;
       color: var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(28, 176, 246, 0.18), transparent 30%),
-        radial-gradient(circle at 90% 15%, rgba(88, 204, 2, 0.18), transparent 28%),
-        radial-gradient(circle at 50% 100%, rgba(206, 130, 255, 0.15), transparent 35%),
+        radial-gradient(circle at 10% 8%, rgba(28,176,246,0.20), transparent 30%),
+        radial-gradient(circle at 90% 12%, rgba(88,204,2,0.18), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(206,130,255,0.14), transparent 35%),
         var(--bg);
-      overflow-x: hidden;
       transition: background 0.35s ease, color 0.35s ease;
+      overflow-x: hidden;
     }
 
     button {
@@ -93,15 +85,15 @@
     }
 
     .app {
-      width: min(1120px, 94vw);
+      width: min(1160px, 94vw);
       margin: 0 auto;
-      padding: 22px 0 42px;
+      padding: 22px 0 44px;
     }
 
     .topbar {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 18px;
       margin-bottom: 22px;
       animation: slideDown 0.55s ease both;
@@ -117,18 +109,17 @@
       width: 66px;
       height: 66px;
       border-radius: 22px;
-      background: linear-gradient(145deg, var(--green), #9be600);
-      box-shadow: var(--mini-shadow);
       display: grid;
       place-items: center;
       font-size: 2.1rem;
-      transform: rotate(-4deg);
+      background: linear-gradient(145deg, var(--green), #9be600);
+      box-shadow: var(--mini-shadow);
       animation: mascotFloat 3s ease-in-out infinite;
     }
 
     .brand h1 {
       margin: 0;
-      font-size: clamp(1.45rem, 3vw, 2.55rem);
+      font-size: clamp(1.5rem, 3vw, 2.55rem);
       line-height: 1.15;
       font-weight: 900;
     }
@@ -142,8 +133,8 @@
 
     .top-actions {
       display: flex;
-      gap: 10px;
       align-items: center;
+      gap: 10px;
     }
 
     .icon-btn {
@@ -151,11 +142,11 @@
       height: 54px;
       border-radius: 18px;
       background: var(--card);
-      border: 2px solid var(--border);
       color: var(--text);
+      border: 2px solid var(--border);
       box-shadow: var(--mini-shadow);
       font-size: 1.25rem;
-      transition: transform 0.18s ease, filter 0.18s ease;
+      transition: 0.18s ease;
     }
 
     .icon-btn:hover {
@@ -181,7 +172,7 @@
     }
 
     .progress-bar {
-      height: 19px;
+      height: 20px;
       width: 0%;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--green), var(--blue), var(--purple));
@@ -190,11 +181,11 @@
 
     .hud-pill {
       background: var(--card);
-      border: 2px solid var(--border);
       color: var(--text);
+      border: 2px solid var(--border);
       border-radius: 999px;
-      box-shadow: var(--mini-shadow);
       padding: 12px 18px;
+      box-shadow: var(--mini-shadow);
       font-size: 1.02rem;
       font-weight: 900;
       white-space: nowrap;
@@ -202,7 +193,7 @@
 
     .screen {
       display: none;
-      min-height: 610px;
+      min-height: 620px;
     }
 
     .screen.active {
@@ -211,13 +202,13 @@
     }
 
     .panel {
+      position: relative;
+      overflow: hidden;
       background: var(--card);
       border: 2px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: clamp(22px, 4vw, 42px);
-      position: relative;
-      overflow: hidden;
     }
 
     .panel::before {
@@ -225,8 +216,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at top right, rgba(88, 204, 2, 0.10), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(28, 176, 246, 0.11), transparent 30%);
+        radial-gradient(circle at top right, rgba(88,204,2,0.10), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(28,176,246,0.11), transparent 30%);
       pointer-events: none;
     }
 
@@ -238,8 +229,8 @@
     .hero {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
       gap: 28px;
+      align-items: center;
     }
 
     .hero h2,
@@ -253,10 +244,9 @@
     }
 
     .hero p,
-    .concept-text,
     .result-text {
       margin: 0;
-      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      font-size: clamp(1.22rem, 2.3vw, 1.65rem);
       line-height: 2;
       font-weight: 800;
     }
@@ -265,7 +255,7 @@
       min-height: 330px;
       border-radius: 34px;
       background:
-        radial-gradient(circle at top, rgba(255, 255, 255, 0.55), transparent 36%),
+        radial-gradient(circle at top, rgba(255,255,255,0.55), transparent 36%),
         linear-gradient(145deg, #baff73, #75d8ff);
       display: grid;
       place-items: center;
@@ -280,7 +270,7 @@
       gap: 8px;
       background: var(--blue-soft);
       color: var(--blue-dark);
-      border: 2px solid rgba(28, 176, 246, 0.28);
+      border: 2px solid rgba(28,176,246,0.28);
       border-radius: 999px;
       padding: 8px 15px;
       font-size: 1rem;
@@ -292,22 +282,34 @@
       color: #7dd3fc;
     }
 
+    .rules-box {
+      margin-top: 20px;
+      background: var(--yellow-soft);
+      border: 2px solid rgba(255,200,0,0.42);
+      border-radius: 22px;
+      padding: 18px;
+      line-height: 1.8;
+      font-weight: 900;
+      text-align: right;
+      direction: rtl;
+    }
+
     .lesson-map {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin-top: 28px;
     }
 
     .lesson-node {
-      min-height: 158px;
+      min-height: 162px;
       border-radius: 22px;
       padding: 18px;
       border: 2px solid var(--border);
-      background: var(--card-2);
+      background: var(--card-soft);
       color: var(--text);
       box-shadow: var(--mini-shadow);
-      transition: transform 0.18s ease, filter 0.18s ease, opacity 0.18s ease;
+      transition: 0.18s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -320,8 +322,8 @@
     }
 
     .lesson-node.locked {
-      opacity: 0.55;
-      filter: grayscale(0.4);
+      opacity: 0.52;
+      filter: grayscale(0.45);
     }
 
     .lesson-node.unlocked:hover {
@@ -345,21 +347,59 @@
       font-weight: 900;
     }
 
-    .concept-card {
+    .learning-card {
       margin-top: 22px;
-      min-height: 280px;
+      min-height: 330px;
       border-radius: 24px;
-      background: var(--card-2);
+      background: var(--card-soft);
       border: 2px solid var(--border);
       padding: clamp(22px, 4vw, 38px);
-      display: flex;
-      align-items: center;
-      box-shadow: inset 0 -5px 0 rgba(30, 41, 59, 0.05);
+      box-shadow: inset 0 -5px 0 rgba(30,41,59,0.05);
       animation: fadeSlide 0.45s ease both;
+      text-align: right;
+      direction: rtl;
     }
 
-    .concept-text {
-      width: 100%;
+    .learning-card h3 {
+      margin: 0 0 20px;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      font-weight: 900;
+      color: var(--blue-dark);
+      text-align: right;
+    }
+
+    body.dark .learning-card h3 {
+      color: #7dd3fc;
+    }
+
+    .learning-card ul {
+      margin: 0;
+      padding: 0 28px 0 0;
+      text-align: right;
+      direction: rtl;
+    }
+
+    .learning-card li {
+      margin: 0 0 16px;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      line-height: 2;
+      font-weight: 800;
+      text-align: right;
+      direction: rtl;
+    }
+
+    .learning-card li::marker {
+      color: var(--green);
+      font-size: 1.25em;
+    }
+
+    .learning-card strong {
+      font-weight: 900;
+      color: var(--green-dark);
+    }
+
+    body.dark .learning-card strong {
+      color: #a3e635;
     }
 
     .button-row {
@@ -371,6 +411,12 @@
       margin-top: 24px;
     }
 
+    .mini-info {
+      color: var(--muted);
+      font-size: 1.03rem;
+      font-weight: 900;
+    }
+
     .btn {
       min-width: 170px;
       border-radius: 18px;
@@ -379,7 +425,7 @@
       background: var(--green);
       box-shadow: 0 7px 0 var(--green-dark);
       font-size: 1.12rem;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+      transition: 0.12s ease;
     }
 
     .btn:hover {
@@ -407,12 +453,6 @@
       box-shadow: 0 7px 0 #64748b;
     }
 
-    .mini-info {
-      color: var(--muted);
-      font-size: 1.03rem;
-      font-weight: 900;
-    }
-
     .quiz-card {
       background: var(--card);
       border: 2px solid var(--border);
@@ -433,9 +473,10 @@
 
     .question-title {
       margin: 0 0 22px;
-      font-size: clamp(1.55rem, 3.2vw, 2.55rem);
+      font-size: clamp(1.55rem, 3.2vw, 2.5rem);
       line-height: 1.35;
       font-weight: 900;
+      text-align: right;
     }
 
     .answers {
@@ -446,16 +487,17 @@
 
     .answer,
     .match-item {
-      background: var(--card-2);
+      background: var(--card-soft);
       border: 3px solid var(--border);
       color: var(--text);
       border-radius: 18px;
-      box-shadow: 0 6px 0 rgba(30, 41, 59, 0.08);
+      box-shadow: 0 6px 0 rgba(30,41,59,0.08);
       padding: 18px;
       min-height: 74px;
       font-size: 1.12rem;
       text-align: right;
-      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      direction: rtl;
+      transition: 0.15s ease;
     }
 
     .answer:hover,
@@ -490,6 +532,14 @@
       gap: 12px;
     }
 
+    .match-col-title {
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 900;
+      margin-bottom: 2px;
+      text-align: center;
+    }
+
     .match-item {
       text-align: center;
     }
@@ -513,6 +563,8 @@
       font-size: 1.12rem;
       font-weight: 900;
       line-height: 1.7;
+      text-align: right;
+      direction: rtl;
     }
 
     .feedback.show {
@@ -523,13 +575,13 @@
     .feedback.good {
       color: var(--green-dark);
       background: var(--green-soft);
-      border: 2px solid rgba(88, 204, 2, 0.35);
+      border: 2px solid rgba(88,204,2,0.35);
     }
 
     .feedback.bad {
       color: var(--red-dark);
       background: var(--red-soft);
-      border: 2px solid rgba(255, 75, 75, 0.35);
+      border: 2px solid rgba(255,75,75,0.35);
     }
 
     body.dark .feedback.good {
@@ -568,17 +620,6 @@
       box-shadow: 0 10px 0 var(--red-dark);
     }
 
-    .rules-box {
-      margin-top: 20px;
-      background: var(--yellow-soft);
-      border: 2px solid rgba(255, 200, 0, 0.42);
-      border-radius: 22px;
-      padding: 18px;
-      color: var(--text);
-      line-height: 1.8;
-      font-weight: 900;
-    }
-
     .confetti {
       position: fixed;
       z-index: 100;
@@ -591,97 +632,50 @@
     }
 
     @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeSlide {
-      from {
-        opacity: 0;
-        transform: translateY(24px) scale(0.985);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(24px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     @keyframes mascotFloat {
-      0%, 100% {
-        transform: translateY(0) rotate(-4deg);
-      }
-      50% {
-        transform: translateY(-6px) rotate(3deg);
-      }
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-6px) rotate(3deg); }
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(2deg);
-      }
-      50% {
-        transform: translateY(-12px) rotate(-2deg);
-      }
+      0%, 100% { transform: translateY(0) rotate(2deg); }
+      50% { transform: translateY(-12px) rotate(-2deg); }
     }
 
     @keyframes successBounce {
-      0%, 100% {
-        transform: scale(1);
-      }
-      38% {
-        transform: scale(1.09);
-      }
-      62% {
-        transform: scale(0.97);
-      }
+      0%, 100% { transform: scale(1); }
+      38% { transform: scale(1.09); }
+      62% { transform: scale(0.97); }
     }
 
     @keyframes errorShake {
-      0%, 100% {
-        transform: translateX(0);
-      }
-      20% {
-        transform: translateX(-8px);
-      }
-      40% {
-        transform: translateX(8px);
-      }
-      60% {
-        transform: translateX(-6px);
-      }
-      80% {
-        transform: translateX(6px);
-      }
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-6px); }
+      80% { transform: translateX(6px); }
     }
 
     @keyframes confettiFall {
-      to {
-        opacity: 0;
-        transform: translateY(108vh) rotate(720deg);
-      }
+      to { opacity: 0; transform: translateY(108vh) rotate(720deg); }
     }
 
-    @media (max-width: 860px) {
-      body {
-        font-size: 1.08rem;
-      }
+    @media (max-width: 900px) {
+      body { font-size: 1.08rem; }
 
       .topbar {
         align-items: flex-start;
@@ -717,12 +711,12 @@
         grid-template-columns: 1fr;
       }
 
-      .btn {
-        width: 100%;
-      }
-
       .button-row {
         align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
       }
     }
   </style>
@@ -735,7 +729,7 @@
         <div class="mascot">🦉</div>
         <div>
           <h1>رحلة التفوق في الاجتماعيات</h1>
-          <p>تعلّم، جاوب، وفتح المراحل بحال Duolingo</p>
+          <p>8 دروس كاملة + اختبارات تفاعلية + Final Boss</p>
         </div>
       </div>
 
@@ -765,174 +759,233 @@
       {
         id: 1,
         icon: "📜",
-        title: "التاريخ - الكفاح من أجل الاستقلال",
-        paragraphs: [
-          "المقاومة المسلحة: أحمد الهيبة (سيدي بوعثمان 1912)، موحى أحمو الزياني (الهري 1914)، الخطابي (أنوال 1921)، عسو أوبسلام (بوكافر 1933).",
-          "الحركة الوطنية: بدأت بالمطالبة بالإصلاحات (1930) ثم المطالبة بالاستقلال في 11 يناير 1944.",
-          "استكمال الوحدة الترابية: طنجة (1956)، طرفاية (1958)، سيدي إفني (1969)، الساقية الحمراء (1975)، واد الذهب (1979).",
-          "مصطلحات: الظهير البربري (قانون 1930 للتفريق بين الأمازيغ والعرب)، الحركة الوطنية، الاستقلال."
-        ],
-        questions: [
+        title: "التاريخ - الكفاح من أجل الاستقلال وإتمام الوحدة الترابية",
+        cards: [
           {
-            type: "mcq",
-            prompt: "ما تاريخ المطالبة بالاستقلال؟",
-            answers: ["11 يناير 1944", "16 ماي 1930", "1956", "1979"],
-            correct: "11 يناير 1944"
-          },
-          {
-            type: "match",
-            prompt: "اربط القائد بالمعركة المناسبة:",
-            pairs: [
-              ["أحمد الهيبة", "سيدي بوعثمان 1912"],
-              ["موحى أحمو الزياني", "الهري 1914"],
-              ["الخطابي", "أنوال 1921"],
-              ["عسو أوبسلام", "بوكافر 1933"]
+            title: "مراحل الاحتلال والمقاومة المسلحة",
+            items: [
+              "مراحل الاحتلال: قبل 1907 (سبتة ومليلية)، 1907-1912 (الشرق، الدار البيضاء)، 1912-1914 (مراكش)، 1914-1926 (الأطلس والريف)، 1931-1934 (الجنوب).",
+              "أحمد الهيبة: انهزم في معركة سيدي بوعثمان سنة 1912م ضد فرنسا.",
+              "موحى أحمو الزياني: انتصر في معركة الهري سنة 1914م.",
+              "محمد بن عبد الكريم الخطابي: انتصر في معركة أنوال سنة 1921م.",
+              "عسو أو بسلام: استسلم بعد هزيمته بمعركة بوكافر سنة 1933م."
             ]
           },
           {
-            type: "tf",
-            prompt: "الحركة الوطنية بدأت بالمطالبة بالإصلاحات سنة 1930.",
-            correct: true
+            title: "الحركة الوطنية واستكمال الوحدة الترابية",
+            items: [
+              "الحركة الوطنية: المطالبة بالإصلاحات خلال الثلاثينيات، وتحولت إلى المطالبة بالاستقلال بتقديم وثيقة 11 يناير 1944م.",
+              "الوحدة الترابية: 1956 (طنجة)، 1958 (طرفاية)، 1969 (سيدي إفني)، 1975 (الساقية الحمراء بعد المسيرة الخضراء)، 1979 (واد الذهب)."
+            ]
           },
           {
-            type: "mcq",
-            prompt: "ما المقصود بالظهير البربري؟",
-            answers: [
-              "قانون 1930 للتفريق بين الأمازيغ والعرب",
-              "معركة في الريف سنة 1921",
-              "وثيقة المطالبة بالاستقلال",
-              "منطقة استرجعها المغرب سنة 1975"
-            ],
-            correct: "قانون 1930 للتفريق بين الأمازيغ والعرب"
-          },
-          {
-            type: "mcq",
-            prompt: "متى استرجع المغرب واد الذهب؟",
-            answers: ["1979", "1975", "1969", "1958"],
-            correct: "1979"
+            title: "المصطلحات",
+            terms: [
+              ["الظهير البربري", "مرسوم قانون أصدرته فرنسا في 16 ماي 1930 للتفريق بين الأمازيغ والعرب في القضاء."],
+              ["الحركة الوطنية", "حركة سياسية ظهرت سنة 1930م للدفاع عن استقلال المغرب."],
+              ["الاستقلال", "تحرر الدولة المستعمرة من سيطرة الدولة المستعمرة."],
+              ["المقاومة", "رد فعل قام به المغاربة ضد الاستعمار وهي إما مسلحة أو سياسية."],
+              ["إتمام الوحدة الترابية", "استرجاع المغرب لمناطقه الجنوبية."]
+            ]
           }
+        ],
+        questions: [
+          { type: "mcq", prompt: "متى تم تقديم وثيقة المطالبة بالاستقلال؟", answers: ["11 يناير 1944م", "16 ماي 1930", "1956", "1979"], correct: "11 يناير 1944م" },
+          { type: "tf", prompt: "موحى أحمو الزياني انتصر في معركة الهري سنة 1914م.", correct: true },
+          { type: "mcq", prompt: "من انتصر في معركة أنوال سنة 1921م؟", answers: ["محمد بن عبد الكريم الخطابي", "أحمد الهيبة", "عسو أو بسلام", "محمد الخامس"], correct: "محمد بن عبد الكريم الخطابي" },
+          { type: "match", prompt: "اربط الاسم بالحدث أو التاريخ المناسب:", pairs: [["أحمد الهيبة", "سيدي بوعثمان سنة 1912م"], ["موحى أحمو الزياني", "الهري سنة 1914م"], ["محمد بن عبد الكريم الخطابي", "أنوال سنة 1921م"], ["عسو أو بسلام", "بوكافر سنة 1933م"]] },
+          { type: "mcq", prompt: "متى تم استرجاع واد الذهب؟", answers: ["1979", "1975", "1969", "1958"], correct: "1979" }
         ]
       },
       {
         id: 2,
-        icon: "🌍",
-        title: "الجغرافيا - نيجيريا والنهج الجغرافي",
-        paragraphs: [
-          "نيجيريا - الغنى والضعف: غنى طبيعي (بترول، غاز، فلاحة) وضعف تنموي (الرتبة 153، فقر).",
-          "العوامل المفسرة: انفجار ديمغرافي، هيمنة الشركات الأجنبية، الفساد، بوكو حرام.",
-          "النهج الجغرافي: يعتمد على 3 خطوات بالترتيب: الوصف (تقديم الظاهرة)، التفسير (إبراز العوامل)، التعميم (المقارنة واستخلاص القواعد)."
-        ],
-        questions: [
+        icon: "🏛️",
+        title: "التاريخ - المراحل الكبرى لبناء الدولة المغربية الحديثة",
+        cards: [
           {
-            type: "mcq",
-            prompt: "ما مظاهر الغنى الطبيعي في نيجيريا حسب الدرس؟",
-            answers: ["بترول، غاز، فلاحة", "ذهب فقط", "صناعة السيارات فقط", "سياحة جبلية"],
-            correct: "بترول، غاز، فلاحة"
-          },
-          {
-            type: "tf",
-            prompt: "تعاني نيجيريا من ضعف تنموي رغم توفرها على غنى طبيعي.",
-            correct: true
-          },
-          {
-            type: "tf",
-            prompt: "حسب الدرس، رتبة نيجيريا في مؤشر التنمية هي 153.",
-            correct: true
-          },
-          {
-            type: "match",
-            prompt: "اربط خطوات النهج الجغرافي بمعانيها:",
-            pairs: [
-              ["الوصف", "تقديم الظاهرة"],
-              ["التفسير", "إبراز العوامل"],
-              ["التعميم", "المقارنة واستخلاص القواعد"]
+            title: "مراحل بناء الدولة",
+            items: [
+              "مرحلة 1956-1961: تكوين أول حكومة، تقسيم المغرب إلى عمالات وأقاليم، وتشكيل القوات المسلحة.",
+              "مرحلة 1961-1999: إصدار أول دستور سنة 1962م، ومغربة الاقتصاد 1973م.",
+              "مرحلة ما بعد 1999 (العهد الجديد): تعديل الدستور 2011م، وإطلاق المبادرة الوطنية للتنمية البشرية."
             ]
           },
           {
-            type: "mcq",
-            prompt: "أي عامل من العوامل المفسرة للضعف التنموي في نيجيريا؟",
-            answers: ["الفساد", "غياب الفلاحة", "انعدام السكان", "غياب البترول والغاز"],
-            correct: "الفساد"
+            title: "المصطلحات",
+            terms: [
+              ["المخططات الاقتصادية", "برامج اعتمدها المغرب في سياسته الاقتصادية بعد الاستقلال لتحسين مستوى النمو."],
+              ["الدولة الحديثة", "دولة المؤسسات السياسية والاقتصادية والاجتماعية التي تسعى الى ترسيخ الديمقراطية."],
+              ["محمد الخامس", "تولى حكم المغرب ما بين 1927 و 1961م وساند الحركة الوطنية."],
+              ["الحسن الثاني", "حكم المغرب ما بين 1961 و 1999م في عهده صدر أول دستور مغربي."],
+              ["محمد السادس", "تولى حكم المغرب سنة 1999م تميز عهده بدينامية جديدة مع إعطاء الأولوية للجانب الاجتماعي والاقتصادي."],
+              ["العهد الجديد", "اتسم بإصلاحات دستورية وحقوقية وسياسية واجتماعية."],
+              ["دولة الحق والقانون", "يتم فيها تطبيق القانون على الاشخاص والسلطات العمومية."]
+            ]
           }
+        ],
+        questions: [
+          { type: "mcq", prompt: "ما الذي يميز مرحلة 1956-1961؟", answers: ["تكوين أول حكومة، تقسيم المغرب إلى عمالات وأقاليم، وتشكيل القوات المسلحة", "تعديل الدستور 2011م", "مغربة الاقتصاد 1973م", "إطلاق المسيرة الخضراء"], correct: "تكوين أول حكومة، تقسيم المغرب إلى عمالات وأقاليم، وتشكيل القوات المسلحة" },
+          { type: "mcq", prompt: "متى صدر أول دستور مغربي؟", answers: ["1962م", "1973م", "1999م", "2011م"], correct: "1962م" },
+          { type: "tf", prompt: "مرحلة ما بعد 1999 تسمى العهد الجديد.", correct: true },
+          { type: "match", prompt: "اربط الملك بالمعلومة المناسبة:", pairs: [["محمد الخامس", "تولى حكم المغرب ما بين 1927 و 1961م وساند الحركة الوطنية."], ["الحسن الثاني", "حكم المغرب ما بين 1961 و 1999م في عهده صدر أول دستور مغربي."], ["محمد السادس", "تولى حكم المغرب سنة 1999م تميز عهده بدينامية جديدة مع إعطاء الأولوية للجانب الاجتماعي والاقتصادي."]] },
+          { type: "mcq", prompt: "ما معنى دولة الحق والقانون؟", answers: ["يتم فيها تطبيق القانون على الاشخاص والسلطات العمومية.", "برامج لتحسين مستوى النمو.", "استرجاع المغرب لمناطقه الجنوبية.", "مجموع الأنشطة التي تترجم عملية الإنتاج."], correct: "يتم فيها تطبيق القانون على الاشخاص والسلطات العمومية." }
         ]
       },
       {
         id: 3,
-        icon: "🕊️",
-        title: "المواطنة - حوار الأديان والبرامج الإعلامية",
-        paragraphs: [
-          "حوار الأديان: لقاءات تواصلية لنشر السلم. من أساليبه: حوارات فردية، جماعية، بالمراسلة. المغرب نموذج للتعايش.",
-          "البرنامج الإعلامي: وسيلة للتأثير في الأفراد. أشكاله: مكتوب، مرئي، مسموع. خطوته: التصور (اختيار الموضوع) والتخطيط (صياغة النص)."
-        ],
-        questions: [
+        icon: " pyramids ".trim(),
+        title: "الجغرافيا - مصر نموذج تنموي عربي",
+        cards: [
           {
-            type: "mcq",
-            prompt: "ما تعريف البرنامج الإعلامي؟",
-            answers: [
-              "وسيلة للتأثير في الأفراد",
-              "معركة ضد الاستعمار",
-              "قانون للتفريق بين الأمازيغ والعرب",
-              "مرحلة من استكمال الوحدة الترابية"
-            ],
-            correct: "وسيلة للتأثير في الأفراد"
-          },
-          {
-            type: "match",
-            prompt: "اربط نوع الإعلام بمثاله:",
-            pairs: [
-              ["مكتوب", "مقال"],
-              ["مرئي", "فيديو"],
-              ["مسموع", "إذاعة"]
+            title: "مظاهر النموذج التنموي والعوامل المفسرة",
+            items: [
+              "فلاحيا: تنوع المنتوجات على طول نهر النيل (قمح، قصب السكر). العوامل: منشآت مائية ضخمة.",
+              "صناعيا: تنوع الصناعات وتركزها في دلتا النيل. العوامل: توفر مصادر طاقية (بترول وغاز) ومعادن.",
+              "سياحيا: مصدر للعملة الصعبة وتوفر مناصب الشغل. العوامل: مقومات حضارية (أهرمات)، وتجهيزية (فنادق)."
             ]
           },
           {
-            type: "tf",
-            prompt: "من أساليب حوار الأديان: حوارات فردية، جماعية، وبالمراسلة.",
-            correct: true
-          },
-          {
-            type: "mcq",
-            prompt: "ما المقصود بمرحلة التصور في البرنامج الإعلامي؟",
-            answers: ["اختيار الموضوع", "صياغة النص", "أنوال 1921", "إبراز العوامل"],
-            correct: "اختيار الموضوع"
-          },
-          {
-            type: "tf",
-            prompt: "المغرب نموذج للتعايش حسب الدرس.",
-            correct: true
+            title: "المشاكل والمصطلحات",
+            items: [
+              "المشاكل: طبيعية (قلة التساقطات)، اقتصادية (الدين الخارجي)، اجتماعية (البطالة والفقر).",
+              "نموذج تنموي عربي: بلد استطاع تحسين مؤشراته الاقتصادية والاجتماعية بفضل حسن استغلال امكاناته الطبيعية والبشرية والسياحية مثل مصر."
+            ]
           }
-        ]
-      }
-    ];
-
-    const extraFinalQuestions = [
-      {
-        type: "mcq",
-        prompt: "متى استرجع المغرب طنجة؟",
-        answers: ["1956", "1958", "1969", "1975"],
-        correct: "1956"
-      },
-      {
-        type: "mcq",
-        prompt: "ما الخطوة الأولى في النهج الجغرافي؟",
-        answers: ["الوصف", "التفسير", "التعميم", "التخطيط"],
-        correct: "الوصف"
-      },
-      {
-        type: "tf",
-        prompt: "البرنامج الإعلامي قد يكون مكتوبا أو مرئيا أو مسموعا.",
-        correct: true
-      },
-      {
-        type: "mcq",
-        prompt: "ما معنى التعميم في النهج الجغرافي؟",
-        answers: [
-          "المقارنة واستخلاص القواعد",
-          "تقديم الظاهرة",
-          "إبراز العوامل",
-          "اختيار الموضوع"
         ],
-        correct: "المقارنة واستخلاص القواعد"
+        questions: [
+          { type: "mcq", prompt: "ما المنتوجات الفلاحية المذكورة في مصر؟", answers: ["قمح، قصب السكر", "الذرة فقط", "القطن فقط", "البترول والغاز"], correct: "قمح، قصب السكر" },
+          { type: "tf", prompt: "تتركز الصناعات في مصر في دلتا النيل.", correct: true },
+          { type: "mcq", prompt: "ما العوامل السياحية في مصر حسب الدرس؟", answers: ["مقومات حضارية (أهرمات)، وتجهيزية (فنادق)", "انفجار ديمغرافي وفساد", "غياب الديمقراطية", "تبعية غذائية"], correct: "مقومات حضارية (أهرمات)، وتجهيزية (فنادق)" },
+          { type: "match", prompt: "اربط المجال بالمعلومة المناسبة:", pairs: [["فلاحيا", "تنوع المنتوجات على طول نهر النيل"], ["صناعيا", "تنوع الصناعات وتركزها في دلتا النيل"], ["سياحيا", "مصدر للعملة الصعبة وتوفر مناصب الشغل"]] },
+          { type: "mcq", prompt: "أي مشكلة اجتماعية ذكرت في الدرس؟", answers: ["البطالة والفقر", "قلة التساقطات", "الدين الخارجي", "البترول والغاز"], correct: "البطالة والفقر" }
+        ]
+      },
+      {
+        id: 4,
+        icon: "🌍",
+        title: "الجغرافيا - نيجيريا بين الغنى الطبيعي والضعف التنموي",
+        cards: [
+          {
+            title: "المظاهر والعوامل",
+            items: [
+              "مظاهر الغنى الطبيعي: فلاحيا (تنوع المنتوجات كالذرة)، طاقيا (التوفر على البترول والغاز الطبيعي).",
+              "مظاهر الضعف التنموي: ضعف مؤشر التنمية (الرتبة 153 عالميا)، انخفاض أمل الحياة.",
+              "العوامل المفسرة للضعف: انفجار ديمغرافي سريع، تبعية غذائية، هيمنة الشركات الأجنبية، غياب الديمقراطية، تهديدات ارهابية (بوكو حرام)."
+            ]
+          },
+          {
+            title: "المصطلحات",
+            terms: [
+              ["الضعف التنموي", "تأخر في مؤشر التنمية بسبب سوء استغلال بلد معين لموارده الطبيعية مثل نيجيريا."],
+              ["الغنى الطبيعي", "وفرة الموارد الطبيعية وتنوعها في بلد ما كنيجيريا."],
+              ["الناتج الداخلي الخام", "مجموع القيم المضافة من طرف الأفراد والمؤسسات النشيطة داخل بلد معين."],
+              ["مؤشر التنمية البشرية", "مؤشر تركيبي لقياس التنمية داخل بلد معين اعتمادا على الدخل الفردي وأمل الحياة وتمدرس الكبار."]
+            ]
+          }
+        ],
+        questions: [
+          { type: "mcq", prompt: "ما مظاهر الغنى الطبيعي في نيجيريا؟", answers: ["فلاحيا (تنوع المنتوجات كالذرة)، طاقيا (التوفر على البترول والغاز الطبيعي).", "الأهرامات والفنادق", "قلة التساقطات", "الدين الخارجي فقط"], correct: "فلاحيا (تنوع المنتوجات كالذرة)، طاقيا (التوفر على البترول والغاز الطبيعي)." },
+          { type: "tf", prompt: "مظاهر الضعف التنموي تشمل ضعف مؤشر التنمية الرتبة 153 عالميا.", correct: true },
+          { type: "mcq", prompt: "أي تهديد إرهابي ذكر في درس نيجيريا؟", answers: ["بوكو حرام", "المسيرة الخضراء", "اليونسكو", "الإسيسكو"], correct: "بوكو حرام" },
+          { type: "match", prompt: "اربط المصطلح بتعريفه:", pairs: [["الضعف التنموي", "تأخر في مؤشر التنمية بسبب سوء استغلال بلد معين لموارده الطبيعية مثل نيجيريا."], ["الغنى الطبيعي", "وفرة الموارد الطبيعية وتنوعها في بلد ما كنيجيريا."], ["الناتج الداخلي الخام", "مجموع القيم المضافة من طرف الأفراد والمؤسسات النشيطة داخل بلد معين."]] },
+          { type: "mcq", prompt: "على ماذا يعتمد مؤشر التنمية البشرية؟", answers: ["الدخل الفردي وأمل الحياة وتمدرس الكبار", "البترول فقط", "عدد المدن فقط", "المؤسسات السياسية فقط"], correct: "الدخل الفردي وأمل الحياة وتمدرس الكبار" }
+        ]
+      },
+      {
+        id: 5,
+        icon: "🧭",
+        title: "الجغرافيا - التدرب على معالجة ظاهرة اقتصادية",
+        cards: [
+          {
+            title: "الخطوات والمصطلحات",
+            items: [
+              "خطوات النهج الجغرافي: 1. الوصف (تقديم الظاهرة وتوطينها)، 2. التفسير (إبراز العوامل المفسرة)، 3. التعميم (المقارنة والخروج بقواعد).",
+              "الظاهرة الاقتصادية: مجموع الأنشطة التي تترجم عملية الإنتاج، وتكون قابلة للملاحظة والدراسة باستخدام المنهج العلمي.",
+              "النهج الجغرافي: هو مجموع الخطوات العلمية والفكرية التي يعتمدها الجغرافي لدراسة ظاهرة معينة."
+            ]
+          }
+        ],
+        questions: [
+          { type: "mcq", prompt: "ما ترتيب خطوات النهج الجغرافي؟", answers: ["الوصف، التفسير، التعميم", "التعميم، الوصف، التفسير", "التفسير، التعميم، الوصف", "التخطيط، التصور، البرهنة"], correct: "الوصف، التفسير، التعميم" },
+          { type: "tf", prompt: "الوصف يعني تقديم الظاهرة وتوطينها.", correct: true },
+          { type: "mcq", prompt: "ما معنى الظاهرة الاقتصادية؟", answers: ["مجموع الأنشطة التي تترجم عملية الإنتاج، وتكون قابلة للملاحظة والدراسة باستخدام المنهج العلمي.", "مرسوم قانون أصدرته فرنسا.", "استرجاع المغرب لمناطقه الجنوبية.", "سياسة تقوم على التشبث بالحلول السلمية."], correct: "مجموع الأنشطة التي تترجم عملية الإنتاج، وتكون قابلة للملاحظة والدراسة باستخدام المنهج العلمي." },
+          { type: "match", prompt: "اربط الخطوة بمعناها:", pairs: [["الوصف", "تقديم الظاهرة وتوطينها"], ["التفسير", "إبراز العوامل المفسرة"], ["التعميم", "المقارنة والخروج بقواعد"]] },
+          { type: "tf", prompt: "النهج الجغرافي هو مجموع الخطوات العلمية والفكرية التي يعتمدها الجغرافي لدراسة ظاهرة معينة.", correct: true }
+        ]
+      },
+      {
+        id: 6,
+        icon: "🕌",
+        title: "التربية على المواطنة - المغرب وحوار الأديان",
+        cards: [
+          {
+            title: "المفهوم والأساليب والمشاركة",
+            items: [
+              "أساليبه: حوارات فردية، حوارات جماعية (مؤتمرات والندوات)، وحوارات بالمراسلة.",
+              "مشاركة المغرب: يضمن حرية ممارسة الشؤون الدينية وينخرط في منظمات كاليونسكو والإسيسكو.",
+              "حوار الأديان: مختلف اللقاءات التواصلية والاستشارية التي تتم بين ممثلين عن مختلف الديانات السماوية لنشر قيم السلم والتعايش."
+            ]
+          }
+        ],
+        questions: [
+          { type: "mcq", prompt: "ما أساليب حوار الأديان؟", answers: ["حوارات فردية، حوارات جماعية (مؤتمرات والندوات)، وحوارات بالمراسلة.", "الوصف والتفسير والتعميم", "مكتوب ومرئي ومسموع", "البطالة والفقر"], correct: "حوارات فردية، حوارات جماعية (مؤتمرات والندوات)، وحوارات بالمراسلة." },
+          { type: "tf", prompt: "ينخرط المغرب في منظمات كاليونسكو والإسيسكو.", correct: true },
+          { type: "mcq", prompt: "ما الهدف من حوار الأديان حسب الدرس؟", answers: ["نشر قيم السلم والتعايش", "التفريق بين الأمازيغ والعرب", "تقديم الظاهرة وتوطينها", "تحسين مستوى النمو فقط"], correct: "نشر قيم السلم والتعايش" },
+          { type: "match", prompt: "اربط العبارة بالمعلومة المناسبة:", pairs: [["أساليبه", "حوارات فردية، حوارات جماعية (مؤتمرات والندوات)، وحوارات بالمراسلة."], ["مشاركة المغرب", "يضمن حرية ممارسة الشؤون الدينية وينخرط في منظمات كاليونسكو والإسيسكو."], ["حوار الأديان", "مختلف اللقاءات التواصلية والاستشارية التي تتم بين ممثلين عن مختلف الديانات السماوية لنشر قيم السلم والتعايش."]] },
+          { type: "tf", prompt: "حوار الأديان يتم بين ممثلين عن مختلف الديانات السماوية.", correct: true }
+        ]
+      },
+      {
+        id: 7,
+        icon: "🕊️",
+        title: "التربية على المواطنة - المغرب والسلم العالمي",
+        cards: [
+          {
+            title: "السلم محليا وعالميا والمصطلحات",
+            items: [
+              "استكمال الوحدة الترابية: التمسك بالنهج السلمي عبر الحوار والتفاوض وتنظيم المسيرة الخضراء سنة 1975م.",
+              "حفظ السلم العالمي: المساهمة في حل النزاعات (القضية الفلسطينية)، والمشاركة في عمليات حفظ السلم في الكونغو والصومال.",
+              "التعايش السلمي: سياسة تقوم على التشبث بالحلول السلمية وتقبل الآخرين لحل الصراعات الدولية.",
+              "السلم العالمي: هو تبني الحوار والتفاوض لضمان الاستقرار والأمن وتجنب مختلف مظاهر العنف."
+            ]
+          }
+        ],
+        questions: [
+          { type: "mcq", prompt: "ما الحدث السلمي المرتبط باستكمال الوحدة الترابية سنة 1975م؟", answers: ["المسيرة الخضراء", "معركة أنوال", "الظهير البربري", "مغربة الاقتصاد"], correct: "المسيرة الخضراء" },
+          { type: "tf", prompt: "حفظ السلم العالمي يشمل المساهمة في حل النزاعات والمشاركة في عمليات حفظ السلم.", correct: true },
+          { type: "mcq", prompt: "ما معنى التعايش السلمي؟", answers: ["سياسة تقوم على التشبث بالحلول السلمية وتقبل الآخرين لحل الصراعات الدولية.", "مجموع القيم المضافة داخل بلد معين.", "برامج سمعية وبصرية ومكتوبة.", "استرجاع المغرب لمناطقه الجنوبية."], correct: "سياسة تقوم على التشبث بالحلول السلمية وتقبل الآخرين لحل الصراعات الدولية." },
+          { type: "match", prompt: "اربط المصطلح بتعريفه:", pairs: [["التعايش السلمي", "سياسة تقوم على التشبث بالحلول السلمية وتقبل الآخرين لحل الصراعات الدولية."], ["السلم العالمي", "هو تبني الحوار والتفاوض لضمان الاستقرار والأمن وتجنب مختلف مظاهر العنف."], ["استكمال الوحدة الترابية", "التمسك بالنهج السلمي عبر الحوار والتفاوض وتنظيم المسيرة الخضراء سنة 1975م."]] },
+          { type: "mcq", prompt: "أين شارك المغرب في عمليات حفظ السلم حسب الدرس؟", answers: ["الكونغو والصومال", "طنجة وطرفاية", "دلتا النيل", "سبتة ومليلية"], correct: "الكونغو والصومال" }
+        ]
+      },
+      {
+        id: 8,
+        icon: "📺",
+        title: "التربية على المواطنة - نقترح برامج اعلامية",
+        cards: [
+          {
+            title: "المفهوم والأنواع والخطوات",
+            items: [
+              "أنواعه: من حيث الشكل (مكتوب، مرئي، مسموع). من حيث المضمون (برامج التحسيس، برامج الترافع).",
+              "خطوات الإعداد: مرحلة التصور (اختيار موضوع والأهداف)، ومرحلة التخطيط (صياغة النص وضبط العمليات)."
+            ]
+          },
+          {
+            title: "المصطلحات",
+            terms: [
+              ["البرامج الإعلامية", "هي البرامج السمعية والبصرية والمكتوبة الهادفة الى ربط الاتصال بالجمهور."],
+              ["قيم المواطنة", "معان ومفاهيم تقوم عليها المواطنة النشيطة، تعكس الوعي بالحق والوجب."],
+              ["البرهنة", "مجموعة أفكار على شكل حجج نريد بها إقناع جهة معينة بتبني موقف أو سلوك معين."]
+            ]
+          }
+        ],
+        questions: [
+          { type: "mcq", prompt: "ما أنواع البرامج الإعلامية من حيث الشكل؟", answers: ["مكتوب، مرئي، مسموع", "الوصف، التفسير، التعميم", "فلاحي، صناعي، سياحي", "حوارات فردية وجماعية"], correct: "مكتوب، مرئي، مسموع" },
+          { type: "tf", prompt: "من حيث المضمون توجد برامج التحسيس وبرامج الترافع.", correct: true },
+          { type: "mcq", prompt: "ما خطوات إعداد البرنامج الإعلامي؟", answers: ["مرحلة التصور ومرحلة التخطيط", "الوصف والتفسير والتعميم", "الحوار والتفاوض", "تكوين أول حكومة"], correct: "مرحلة التصور ومرحلة التخطيط" },
+          { type: "match", prompt: "اربط المصطلح بتعريفه:", pairs: [["البرامج الإعلامية", "هي البرامج السمعية والبصرية والمكتوبة الهادفة الى ربط الاتصال بالجمهور."], ["قيم المواطنة", "معان ومفاهيم تقوم عليها المواطنة النشيطة، تعكس الوعي بالحق والوجب."], ["البرهنة", "مجموعة أفكار على شكل حجج نريد بها إقناع جهة معينة بتبني موقف أو سلوك معين."]] },
+          { type: "mcq", prompt: "ما معنى البرهنة؟", answers: ["مجموعة أفكار على شكل حجج نريد بها إقناع جهة معينة بتبني موقف أو سلوك معين.", "بلد استطاع تحسين مؤشراته الاقتصادية والاجتماعية.", "تأخر في مؤشر التنمية بسبب سوء استغلال الموارد.", "مختلف اللقاءات التواصلية والاستشارية."], correct: "مجموعة أفكار على شكل حجج نريد بها إقناع جهة معينة بتبني موقف أو سلوك معين." }
+        ]
       }
     ];
 
@@ -949,10 +1002,10 @@
 
     const state = {
       screen: "home",
-      unlockedLesson: Number(localStorage.getItem("unlockedLesson") || 0),
-      completedLessons: JSON.parse(localStorage.getItem("completedLessons") || "[]"),
+      unlockedLesson: Number(localStorage.getItem("socialStudiesUnlockedLesson") || 0),
+      completedLessons: JSON.parse(localStorage.getItem("socialStudiesCompletedLessons") || "[]"),
       currentLesson: 0,
-      currentParagraph: 0,
+      currentCard: 0,
       currentQuestion: 0,
       scoreRaw: 0,
       quizQuestions: [],
@@ -964,15 +1017,14 @@
     };
 
     function saveState() {
-      localStorage.setItem("unlockedLesson", String(state.unlockedLesson));
-      localStorage.setItem("completedLessons", JSON.stringify(state.completedLessons));
+      localStorage.setItem("socialStudiesUnlockedLesson", String(state.unlockedLesson));
+      localStorage.setItem("socialStudiesCompletedLessons", JSON.stringify(state.completedLessons));
     }
 
     function playSound(name) {
       if (state.muted) return;
       const sound = sounds[name];
       if (!sound) return;
-
       sound.currentTime = 0;
       sound.volume = name === "complete" ? 0.56 : name === "wrong" ? 0.28 : 0.35;
       sound.play().catch(() => {});
@@ -1007,14 +1059,14 @@
       let text = "ابدأ الرحلة";
 
       if (state.screen === "home") {
-        progress = (state.completedLessons.length / lessons.length) * 80;
+        progress = (state.completedLessons.length / lessons.length) * 82;
         text = `الدروس المكتملة: ${state.completedLessons.length}/${lessons.length}`;
       }
 
       if (state.screen === "lesson") {
         const lesson = lessons[state.currentLesson];
-        progress = ((state.currentParagraph + 1) / lesson.paragraphs.length) * 100;
-        text = `درس ${state.currentLesson + 1} • بطاقة ${state.currentParagraph + 1}/${lesson.paragraphs.length}`;
+        progress = ((state.currentCard + 1) / lesson.cards.length) * 100;
+        text = `درس ${state.currentLesson + 1} • بطاقة ${state.currentCard + 1}/${lesson.cards.length}`;
       }
 
       if (state.screen === "quiz") {
@@ -1049,13 +1101,13 @@
           <div class="panel hero">
             <div>
               <span class="pill">🎮 خاصك 18/20 باش تفتح الدرس التالي</span>
-              <h2>تعلم الاجتماعيات بطريقة ممتعة وسريعة</h2>
+              <h2>راجع الاجتماعيات بطريقة ممتعة ومنظمة</h2>
               <p>
-                اقرأ المفاهيم في بطاقات قصيرة، ثم جاوب على اختبار صغير.
-                عند النجاح، تفتح المرحلة التالية. بعد إكمال الدروس كلها، غادي تواجه Final Boss.
+                اختار الدرس، اقرأ البطاقات واحدة بواحدة، ثم دوز اختبار صغير.
+                من بعد ما تكمل جميع الدروس، غادي تفتح Final Boss.
               </p>
 
-              <div class="rules-box">
+              <div class="rules-box" dir="rtl">
                 ✅ النجاح في الدروس: 18/20 أو أكثر<br>
                 👑 النجاح في الامتحان النهائي: أكثر من 18/20<br>
                 🔗 المطابقة: اختار من العمود الأول ثم اختار الجواب المناسب من العمود الثاني
@@ -1088,12 +1140,28 @@
       `);
     }
 
+    function renderCardItems(card) {
+      if (card.terms) {
+        return `
+          <ul dir="rtl">
+            ${card.terms.map(([term, definition]) => `<li><strong>${term}:</strong> ${definition}</li>`).join("")}
+          </ul>
+        `;
+      }
+
+      return `
+        <ul dir="rtl">
+          ${card.items.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      `;
+    }
+
     function startLesson(index) {
       playSound("click");
       state.screen = "lesson";
       state.isFinalExam = false;
       state.currentLesson = index;
-      state.currentParagraph = 0;
+      state.currentCard = 0;
       state.currentQuestion = 0;
       state.scoreRaw = 0;
       renderLesson();
@@ -1101,8 +1169,8 @@
 
     function renderLesson() {
       const lesson = lessons[state.currentLesson];
-      const paragraph = lesson.paragraphs[state.currentParagraph];
-      const isLast = state.currentParagraph === lesson.paragraphs.length - 1;
+      const card = lesson.cards[state.currentCard];
+      const isLast = state.currentCard === lesson.cards.length - 1;
 
       setView(`
         <section class="screen active">
@@ -1110,25 +1178,26 @@
             <span class="pill">${lesson.icon} الدرس ${state.currentLesson + 1}</span>
             <h2 class="lesson-title">${lesson.title}</h2>
 
-            <div class="concept-card">
-              <p class="concept-text">${paragraph}</p>
-            </div>
+            <article class="learning-card" dir="rtl">
+              <h3>${card.title}</h3>
+              ${renderCardItems(card)}
+            </article>
 
             <div class="button-row">
-              <span class="mini-info">البطاقة ${state.currentParagraph + 1} من ${lesson.paragraphs.length}</span>
-              <button class="btn" data-next-concept>${isLast ? "بدا الاختبار" : "التالي"}</button>
+              <span class="mini-info">البطاقة ${state.currentCard + 1} من ${lesson.cards.length}</span>
+              <button class="btn" data-next-card>${isLast ? "بدا الاختبار" : "التالي"}</button>
             </div>
           </div>
         </section>
       `);
     }
 
-    function nextConcept() {
+    function nextCard() {
       playSound("click");
       const lesson = lessons[state.currentLesson];
 
-      if (state.currentParagraph < lesson.paragraphs.length - 1) {
-        state.currentParagraph += 1;
+      if (state.currentCard < lesson.cards.length - 1) {
+        state.currentCard += 1;
         renderLesson();
       } else {
         startQuiz(false);
@@ -1145,8 +1214,8 @@
       state.correctMatches = 0;
 
       if (isFinal) {
-        const allQuestions = lessons.flatMap(lesson => lesson.questions).concat(extraFinalQuestions);
-        state.quizQuestions = shuffle(allQuestions).slice(0, 10);
+        const allQuestions = lessons.flatMap(lesson => lesson.questions);
+        state.quizQuestions = shuffle(allQuestions).slice(0, 20);
       } else {
         state.quizQuestions = shuffle(lessons[state.currentLesson].questions);
       }
@@ -1192,12 +1261,14 @@
         const right = shuffle(question.pairs.map(pair => pair[1]));
 
         questionBody = `
-          <p class="mini-info">اختار عنصرا من العمود الأول، ثم اختار الجواب المناسب من العمود الثاني.</p>
+          <p class="mini-info" dir="rtl" style="text-align:right;">اختار عنصرا من العمود الأول، ثم اختار الجواب المناسب من العمود الثاني.</p>
           <div class="match-grid">
             <div class="match-col">
+              <div class="match-col-title">العمود الأول</div>
               ${left.map(item => `<button class="match-item" data-left="${escapeHtml(item)}">${item}</button>`).join("")}
             </div>
             <div class="match-col">
+              <div class="match-col-title">العمود الثاني</div>
               ${right.map(item => `<button class="match-item" data-right="${escapeHtml(item)}">${item}</button>`).join("")}
             </div>
           </div>
@@ -1212,7 +1283,7 @@
               <span class="hud-pill">سؤال ${state.currentQuestion + 1}/${state.quizQuestions.length} • ${getDisplayScore()}/20</span>
             </div>
 
-            <h2 class="question-title">${question.prompt}</h2>
+            <h2 class="question-title" dir="rtl">${question.prompt}</h2>
 
             ${questionBody}
 
@@ -1275,7 +1346,7 @@
 
       finishQuestion(
         isCorrect,
-        isCorrect ? "رائع! إجابة صحيحة." : "انتبه! راجع المفهوم ثم حاول من جديد."
+        isCorrect ? "رائع! إجابة صحيحة." : "انتبه! راجع البطاقة ثم حاول من جديد."
       );
     }
 
@@ -1368,10 +1439,12 @@
         if (!state.completedLessons.includes(state.currentLesson)) {
           state.completedLessons.push(state.currentLesson);
         }
+
         state.unlockedLesson = Math.max(
           state.unlockedLesson,
           Math.min(lessons.length - 1, state.currentLesson + 1)
         );
+
         saveState();
       }
 
@@ -1391,7 +1464,7 @@
 
             <div class="big-score ${passed ? "" : "fail"}">${finalScore}/20</div>
 
-            <p class="result-text">
+            <p class="result-text" dir="rtl">
               ${
                 passed
                   ? state.isFinalExam
@@ -1425,11 +1498,11 @@
               <span class="pill">👑 Final Boss</span>
               <h2>الامتحان النهائي</h2>
               <p>
-                الآن غادي تجاوب على أسئلة عشوائية من جميع الدروس:
+                الآن غادي تجاوب على أسئلة عشوائية من جميع الدروس الثمانية:
                 التاريخ، الجغرافيا، والتربية على المواطنة.
               </p>
 
-              <div class="rules-box">
+              <div class="rules-box" dir="rtl">
                 شرط الفوز: خاصك تجيب أكثر من 18/20.
               </div>
 
@@ -1458,7 +1531,7 @@
     function launchConfetti() {
       const colors = ["#58cc02", "#1cb0f6", "#ffc800", "#ff4b4b", "#ce82ff", "#ff9600"];
 
-      for (let i = 0; i < 70; i++) {
+      for (let i = 0; i < 80; i++) {
         const piece = document.createElement("div");
         piece.className = "confetti";
         piece.style.left = Math.random() * 100 + "vw";
@@ -1467,7 +1540,7 @@
         piece.style.transform = `rotate(${Math.random() * 360}deg)`;
         document.body.appendChild(piece);
 
-        setTimeout(() => piece.remove(), 2600);
+        setTimeout(() => piece.remove(), 2700);
       }
     }
 
@@ -1476,8 +1549,8 @@
         button.addEventListener("click", () => startLesson(Number(button.dataset.startLesson)));
       });
 
-      document.querySelectorAll("[data-next-concept]").forEach(button => {
-        button.addEventListener("click", nextConcept);
+      document.querySelectorAll("[data-next-card]").forEach(button => {
+        button.addEventListener("click", nextCard);
       });
 
       document.querySelectorAll("[data-mcq]").forEach(button => {
